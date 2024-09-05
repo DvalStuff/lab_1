@@ -4,7 +4,7 @@
 0. Підготовка
    Файли для виконання лабораторної роботи були завантаженні з https://githowto.com/githowto.zip та розпаковані на робочий стіл, протягом курсу використовувалась тільки папка repositories.
 
-1. [Фінальні приготування]([url])<br>
+1. [Фінальні приготування]([screenshots/1.png])<br>
    Почала з того, що налаштувала Git, щоб він знав, хто вносить зміни в проєкти. Я виконала наступні команди у командному рядку:<br>
    <br>git config --global user.name "Kyryllova Sofiia"<br>
    git config --global user.email "bulldoshka3@gmail.com"<br>
