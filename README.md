@@ -223,3 +223,4 @@ git commit --amend -m "Added copyright statement with email"
 [скрин етапу](screenshots/25.png)  [скрин етапу](screenshots/26.png)  
 
 
+
