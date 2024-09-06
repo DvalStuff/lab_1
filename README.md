@@ -287,3 +287,16 @@ git log --follow css/style.css
 Результат показав, що історія файлу була збережена і правильно відображена.
 [скрин етапу](screenshots/31.png)  [скрин етапу](screenshots/32.png)  [скрин етапу](screenshots/33.png)  
 
+Створила файл README. Він буде пояснювати, про що мій проєкт.
+Наразі я перебуваю у гілці style. Файл README не є частиною цієї гілки, тому перед комітом слід перейти до гілки main:
+git switch main
+git add README
+git commit -m "Added README"
+Тепер у репозиторії є дві гілки, що розходяться. Виконую команду log, щоб переглянути гілки і те, як вони розходяться.
+git log --all --graph
+Злиття переносить зміни з двох гілок в одну. Повертаємося до гілки style і зливаємо main із style.
+git switch style
+git merge main
+git log --all --graph
+[скрин етапу](screenshots/34.png)  [скрин етапу](screenshots/35.png)  
+
