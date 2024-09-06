@@ -253,3 +253,37 @@ cat hello.html
 Таким чином, я побачила, що всі зміни, зроблені у гілці style, збережені і відображають підключення файлу стилів.
 [скрин етапу](screenshots/29.png)  [скрин етапу](screenshots/30.png)  
 
+Для початку я переглянула історію змін файлів hello.html і style.css за допомогою команди git log.
+git log hello.html
+Результат показав всі коміти, в яких був змінений hello.html:
+Потім я перевірила історію style.css:
+git log style.css
+Перегляд змін у конкретному коміті, зміни були внесені до файлу hello.html у коміті з тегом v1. Для цього використала команду git show.
+git show v1
+Результат показав зміни у файлі hello.html в коміті з тегом v1.
+Я перейменувала файл hello.html на index.html за допомогою команди mv, а потім перевірила статус змін.
+mv hello.html index.html
+git status
+Git показав, що hello.html був видалений, а index.html був створений як новий файл:
+deleted:    hello.html
+Untracked files:
+  index.html
+Далі я додала зміни до індексу:
+git add .
+git status
+Тепер Git розпізнав перейменування:
+renamed:    hello.html -> index.html
+Переміщення файлу без втрати історії Я створила нову директорію css і перемістила файл style.css до цієї директорії, використовуючи команду git mv:
+mkdir css
+git mv style.css css/style.css
+git status
+Результат показав, що style.css був переміщений до css/style.css:
+renamed:    style.css -> css/style.css
+Я закомітила зміни:
+git commit -m "Renamed hello.html; moved style.css"
+Нарешті, я перевірила історію змін для css/style.css з і без опції --follow, щоб побачити історію файлу до та після переміщення:
+git log css/style.css
+git log --follow css/style.css
+Результат показав, що історія файлу була збережена і правильно відображена.
+[скрин етапу](screenshots/31.png)  [скрин етапу](screenshots/32.png)  [скрин етапу](screenshots/33.png)  
+
